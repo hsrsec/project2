@@ -1,16 +1,42 @@
 import sys
 
+import pandas as pd
+from sqlalchemy import create_engine
 
-def load_data(messages_filepath, categories_filepath):
-    pass
+class DataPipeline():
+
+    """
+    
+    """
+
+    def __init__(self, messages_filepath, categories_filepath, database_filepath):
+        """
+        
+        Keyword arguments:
+        messages_filepath   -- the filepath to the file messages.csv
+        categories_filepath -- the filepath to the file categories.csv
+        database_filepath   -- the filepath where to store the resulting database
+        """
+        self.messages_filepath = messages_filepath
+        self.categories_filepath = categories_filepath
+        self.database_filepath = database_filepath
+        self.df = pd.DataFrame()
+
+    def load_data(self):
+        """
+        
+        """
+        messages = pd.read_csv(self.messages_filepath)
+        categories = pd.read_csv(self.categories_filepath)
+        self.df = messages.merge(categories, on="id")
 
 
-def clean_data(df):
-    pass
+    def clean_data(self):
+        pass
 
 
-def save_data(df, database_filename):
-    pass  
+    def save_data(self):
+        pass  
 
 
 def main():
