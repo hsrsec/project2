@@ -98,15 +98,12 @@ def main():
 
         dataPipeline = DataPipeline_DisasterResponse(messages_filepath=messages_filepath, categories_filepath=categories_filepath, database_filepath=database_filepath)
         dataPipeline.load_data()
-        #df = load_data(messages_filepath, categories_filepath)
 
         print('Cleaning data...')
         dataPipeline.clean_data()
-        #df = clean_data(df)
         
         print('Saving data...\n    DATABASE: {}'.format(database_filepath))
         dataPipeline.save_data()
-        #save_data(df, database_filepath)
         
         print('Cleaned data saved to database!')
     
