@@ -82,9 +82,10 @@ class DataPipeline_DisasterResponse():
 
     def save_data(self):
         """
-        
+        The data which is held in the df attribute is stored into the SQLite database.
         """
-        pass  
+        engine = create_engine('sqlite:///' + self.database_filepath)
+        self.df.to_sql('DisasterResponse', con=engine, index=False)  
 
 
 def main():
@@ -94,13 +95,18 @@ def main():
 
         print('Loading data...\n    MESSAGES: {}\n    CATEGORIES: {}'
               .format(messages_filepath, categories_filepath))
-        df = load_data(messages_filepath, categories_filepath)
+
+        dataPipeline = DataPipeline_DisasterResponse(messages_filepath=messages_filepath, categories_filepath=categories_filepath, database_filepath=database_filepath)
+        dataPipeline.load_data()
+        #df = load_data(messages_filepath, categories_filepath)
 
         print('Cleaning data...')
-        df = clean_data(df)
+        dataPipeline.clean_data()
+        #df = clean_data(df)
         
         print('Saving data...\n    DATABASE: {}'.format(database_filepath))
-        save_data(df, database_filepath)
+        dataPipeline.save_data()
+        #save_data(df, database_filepath)
         
         print('Cleaned data saved to database!')
     
