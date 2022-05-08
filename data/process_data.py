@@ -7,7 +7,7 @@ class DataPipeline_DisasterResponse():
 
     """
     A DataPipeline object:
-    - holds the necessary filepaths ,
+    - has the necessary filepaths ,
     - reads in the data for this project,
     - transforms the data,
     - stores the data in a SQLite database
