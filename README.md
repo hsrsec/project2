@@ -46,8 +46,10 @@ There are three folders:
 - process_data.py           :   The data-pipeline class which reads, cleans and saves the data to the SQLite database
 
 2. models
-- train_classifier.py       :   The machine-learning-pipeline class, which trains and saves the model
-The Output-file `model.pkl` is missing here due to data capacity restrictions for large files from github.
+- train_classifier.py       :   The machine-learning-pipeline class, which trains and saves the model.
+
+The Output-file `model.pkl` is missing here due to data capacity restrictions for large files from github. Just follow
+the Instructions to run the file `train_classifier.py` 
 
 3. templates
 - consists of html files
