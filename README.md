@@ -49,7 +49,7 @@ There are three folders:
 - train_classifier.py       :   The machine-learning-pipeline class, which trains and saves the model.
 
 The Output-file `model.pkl` is missing here due to data capacity restrictions for large files from github. Just follow
-the Instructions to run the file `train_classifier.py` 
+the Instructions to run the file `train_classifier.py` to produce the file.
 
 3. templates
 - consists of html files
