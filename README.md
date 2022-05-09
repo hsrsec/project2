@@ -52,7 +52,7 @@ The Output-file `model.pkl` is missing here due to data capacity restrictions fo
 the Instructions to run the file `train_classifier.py` to produce the file.
 
 3. templates
-- consists of html files
+- consists of html files for the flask application
 
 
 ## Instructions: <a name="instructions"></a>
