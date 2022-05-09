@@ -111,7 +111,7 @@ class MLPipeline_DisasterResponse():
 
     def save_model(self):
         """
-        Save the model at given attribute model_filepath
+        Save the model at given (attribute) model_filepath
         """
         joblib.dump(self.model, self.model_filepath ,compress=1)
 
