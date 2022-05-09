@@ -14,6 +14,8 @@
 
 ## Installation <a name="installation"></a>
 
+The code should run with no issues using Python version 3.*. You should have installed the packages you can find in the file
+`requirements.txt`
 
 ## File Description <a name="file"></a>
 
