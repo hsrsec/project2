@@ -68,6 +68,9 @@ class DataPipeline_DisasterResponse():
             categories[column] = categories[column].str[-1:]
             # convert column from string to numeric
             categories[column] = pd.to_numeric(categories[column])
+        
+        # Elimination of those rows which are multiclass and not binary
+        categories.drop(categories[categories.related == 2].index)
 
         # 3. Step
         self.df = self.df.drop('categories', axis=1)
