@@ -5,6 +5,7 @@ import numpy as np
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 
 import sys
 import joblib
@@ -70,7 +71,11 @@ class MLPipeline_DisasterResponse():
         Cleaning and tokenizing the text.
         """
         text = re.sub(r"[^a-zA-Z0-9]", ' ', text.lower())
+        # Tokenize
         tokens = word_tokenize(text)
+        # Remove stopwords
+        tokens = [tok for tok in tokens if tok not in stopwords.words('english')]
+        # Lemmatize
         lemmatizer = WordNetLemmatizer()
 
         clean_tokens = []
