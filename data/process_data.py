@@ -88,7 +88,7 @@ class DataPipeline_DisasterResponse():
         The data which is held in the df attribute is stored into the SQLite database.
         """
         engine = create_engine('sqlite:///' + self.database_filepath)
-        self.df.to_sql('DisasterResponse', con=engine, index=False)  
+        self.df.to_sql('DisasterResponse', con=engine, index=False, if_exists='replace')  
 
 
 def main():
