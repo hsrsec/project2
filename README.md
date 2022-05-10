@@ -2,18 +2,24 @@
 
 ### Table of contents
 
-1. [Project Description](#motivation)
-2. [Installation](#installation)
-3. [File Description](#file)
-4. [Results](#results)
-5. [Instructions](#instructions)
-6. [Licensing, Authors, and Acknowledgements](#licensing)
+1. [Project Overview](#summary)
+2. [Project Description](#motivation)
+3. [Installation](#installation)
+4. [File Description](#file)
+5. [Results](#results)
+6. [Instructions](#instructions)
+7. [Licensing, Authors, and Acknowledgements](#licensing)
+
+## Project Overview <a name="summary></a>
+
+FigureEight provided tweets and text messages from real disasters. The project is set up to find a way to filter these messages to identify
+the most important ones. There is also a need to categorise these messages to be able to connect the right emergency service to the
+needed help, i. e. when people need water to survive to send specific help.
 
 ## Project Description <a name="motivation"></a>
 
-This project is the next project of the Udacity DataScience nanodegree program. Within this project one is setting up a 
-data-pipeline and a machine-learning-pipeline. The goal is to classify message data sent from people during disasters to 
-label and connect to help services.
+For providing a solution for this project FigureEight provided prelabeled tweets and text messages. This data is then transformed and prepared with an ETL Pipeline and the result is stored in a SQLite database. Afterwards a Machine Learning Pipeline is used to build a supervised learning model. Via the web app one can then copy the message under investigation into a web form and get a classification result, i. e.
+the categories the algorithm identifies within the message. Afterwards a specific emergency response can then be activated.
 
 ## Installation <a name="installation"></a>
 
