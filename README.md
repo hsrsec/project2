@@ -10,7 +10,7 @@
 6. [Instructions](#instructions)
 7. [Licensing, Authors, and Acknowledgements](#licensing)
 
-## Project Overview <a name="summary></a>
+## Project Overview <a name="summary"></a>
 
 FigureEight provided tweets and text messages from real disasters. The project is set up to find a way to filter these messages to identify
 the most important ones. There is also a need to categorise these messages to be able to connect the right emergency service to the
